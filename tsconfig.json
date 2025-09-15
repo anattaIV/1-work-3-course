@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist", /*Папка с итоговым кодом JS(скомпилированный)*/
+    "module": "nodenext", /*Формат модулей, в данном случае node.js(для браузера esnext)*/
+    "target": "es6", /*В какой версии JS компилировать*/
+    "types": [],
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "strict": true, /*Включает максимально строгую типизацию, т.е фильрацию*/
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+  }
+}

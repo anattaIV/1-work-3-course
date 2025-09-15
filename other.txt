@@ -1,0 +1,14 @@
+npm init -y - инитиализация npm
+npm i typescript --save-dev - установка TS
+
+
+
+
+
+
+
+
+
+
+npx tsc - запуск компилятора(копирование проекта в dist)
+node dist/index.js - проверка результата функции introduce
