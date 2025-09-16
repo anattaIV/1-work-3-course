@@ -35,3 +35,47 @@ const person2: Person = { //Пример массива, в котором не�
 
 console.log(introduce(person1));
 console.log(introduce(person2)); //Вывод этих двух примеров.
+//////////////////////////////////////////////////////////
+interface Person {
+  name: string;
+  age: number;
+  hobbies?: string[];
+}
+
+function introduce(person: Person): string { 
+  let hobbiesText: string; 
+
+  if (person.hobbies) { 
+    if (person.hobbies.length > 0) {
+      hobbiesText = person.hobbies.join(", ");
+    } else {
+      hobbiesText = "у меня нет хобби";
+    }
+  } else {
+    hobbiesText = "пользователь не указал хобби";
+  }
+
+  return `Привет, меня зовут ${person.name}, мне ${person.age} лет, мои хобби: ${hobbiesText}`;
+}
+
+const person1: Person = { 
+  name: "Аня",
+  age: 66,
+  hobbies: ["чтение", "спорт"]
+};
+
+const person2: Person = { 
+  name: "Игорь",
+  age: 30,
+  hobbies: []
+};
+
+const person3: Person = { 
+  name: 123,
+  age: 25,
+  // хобби нема
+};
+
+console.log(introduce(person1));
+console.log(introduce(person2));
+console.log(introduce(person3));
